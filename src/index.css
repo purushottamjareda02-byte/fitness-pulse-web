@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 2%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 356 93% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 356 93% 47%;
+    --radius: 0px;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(229, 9, 20, 0.3);
+    color: #ffffff;
+  }
+
+  /* Hide scrollbar for carousel elements */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-crimson text-white font-oswald text-sm font-semibold uppercase tracking-widest px-8 py-3.5 border-2 border-crimson transition-all duration-300 ease-in-out;
+  }
+  .btn-primary:hover {
+    @apply bg-transparent;
+  }
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white font-oswald text-sm font-semibold uppercase tracking-widest px-8 py-3.5 border-2 border-white transition-all duration-300 ease-in-out;
+  }
+  .btn-secondary:hover {
+    @apply bg-white text-near-black;
+  }
+  .btn-secondary:active {
+    transform: scale(0.97);
+  }
+
+  .section-label {
+    @apply font-oswald text-xs font-medium tracking-widest uppercase text-crimson;
+  }
+
+  .section-title {
+    @apply font-oswald text-5xl md:text-4xl font-semibold tracking-tight uppercase text-white leading-tight;
+  }
+
+  .body-text {
+    @apply font-inter text-base font-normal text-light-gray leading-relaxed;
+  }
+}
