@@ -101,12 +101,12 @@ export default function WorkoutsSection() {
               {/* Red Hover Overlay */}
               <div className="absolute inset-0 z-[2] bg-crimson/90 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
 
-              {/* Title Area */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-[3] transition-transform duration-400 group-hover:-translate-y-16">
-                <h3 className="font-oswald text-xl md:text-2xl font-semibold text-white uppercase">
-                  {workout.title}
-                </h3>
-              </div>
+                         {/* Title Area */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-[3] transition-all duration-400 group-hover:opacity-0">
+              <h3 className="font-oswald text-xl md:text-2xl font-semibold text-white uppercase">
+                {workout.title}
+              </h3>
+            </div>
 
               {/* Description (visible on hover) */}
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-[3] opacity-0 group-hover:opacity-100 transition-all duration-400 translate-y-4 group-hover:translate-y-0">
